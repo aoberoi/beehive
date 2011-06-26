@@ -12,15 +12,12 @@ server.listen(8000)
 //WebSocket
 io.sockets.on('connection', function(socket) {
 	socket.on('message', function(msg) {
-	  		console.log('MESSAGE RAW >>');
-	  		console.log(msg);
-	  		console.log('<< MESSAGE RAW');
 	  		if (msg.charAt(0) == '{') { 			        
 	        var props = JSON.parse(msg)
 	        for (key in props) {
 	          if (props.hasOwnProperty(key)) {
 	            drone[key] = 0.4 * props[key]
-	  					console.log(props[key]);
+	  					//console.log(props[key]);
 	          }
 	        }
 	      } else {

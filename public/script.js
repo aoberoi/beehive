@@ -24,10 +24,11 @@ getKey.table = {
   8:  'backspace',
   9:  'tab',
   46: 'delete',
-  16: 'shift'
+  16: 'shift',
 }
 
-var socket = io.connect('http://localhost:8080');
+//var socket = io.connect('http://localhost:8080');
+var socket = io.connect('http://192.168.168.226:8080');
 
 var currKeys = {}
 
@@ -56,6 +57,8 @@ document.addEventListener('keydown', function(evt) {
     socket.send('takeoff')
   } else if (key == 'esc' || key == 'down') {
     socket.send('land')
+	} else if (key == 'r') {
+		socket.send('recover');
   } else {
     currKeys[key] = 1
     update()
