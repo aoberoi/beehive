@@ -7,7 +7,7 @@
   "repository": { "type": "git", "url": "https://github.com/timjb/node-ardrone-web.git" },
   "dependencies": {
     "ardrone": ">=0.1.0",
-    "socket.io": ">=0.6.10",
+    "socket.io": "=0.7.2",
     "connect": ">=0.5.10"
   },
   "scripts": { "start": "node server.js" },

@@ -27,7 +27,7 @@ getKey.table = {
   16: 'shift'
 }
 
-var socket = io.connect('localhost');
+var socket = io.connect('http://localhost:8080');
 
 var currKeys = {}
 
